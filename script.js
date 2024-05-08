@@ -13,7 +13,12 @@ function validateSyntax() {
   // console.log(typeof input);
 
   // Logic for Syntax being "Valid" or "Invalid"
-  if (input == adoptPet && petBirthYear >= 2024 && x <= 1999 && petName) {
+  if (
+    input == adoptPet &&
+    petBirthYear >= 1999 &&
+    petBirthYear <= 2024 &&
+    petName
+  ) {
     result = "Valid Syntax";
     console.log(result);
   } else {
