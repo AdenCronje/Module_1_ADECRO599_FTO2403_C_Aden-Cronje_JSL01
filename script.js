@@ -6,7 +6,14 @@ function validateSyntax() {
   // console.log(petBirthYear);
   let petName = "Forrest";
   let petInfo = ["pet_", "2015", "Forrest"];
-  let adoptPet = petInfo.slice(0, 2);
+  let adoptPet = petInfo.join("");
+
+  // console.log(adoptPet);
+
+  // console.log(adoptPet);
+  // console.log(input);
+  // console.log(typeof adoptPet);
+  // console.log(typeof input);
 
   if (input == adoptPet) {
     result = "Valid Syntax";
