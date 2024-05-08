@@ -1,17 +1,19 @@
 function validateSyntax() {
   let input = document.getElementById("petInput").value;
   // Validation logic goes here
-  let result = "Valid"; // Placeholder for validation result
-  // let birthYear = Math.floor(Math.random);
-  let petName = "";
+  let result = ""; // Placeholder for validation result
+  let petBirthYear = "2015";
+  // console.log(petBirthYear);
+  let petName = "Forrest";
+  let petInfo = ["pet_", "2015", "Forrest"];
+  let adoptPet = petInfo.slice(0, 2);
 
-  if (input == "pet_") {
+  if (input == adoptPet) {
     result = "Valid Syntax";
     console.log(result);
   } else {
-    input === null;
     result = "Invalid Syntax";
-    // console.log(result);
+    console.log(result);
   }
 
   // TODO: Write your validation logic here
