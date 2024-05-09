@@ -2,22 +2,21 @@ function validateSyntax() {
   let input = document.getElementById("petInput").value;
   // Validation logic goes here
   let result = ""; // Placeholder for validation result
-  let petBirthYear = "2015";
-  let petName = "Forrest";
-  let petInfo = ["pet_", "2015", "Forrest"];
-  let adoptPet = petInfo.join("");
-  // console.log(adoptPet);
-  // console.log(adoptPet);
-  // console.log(input);
-  // console.log(typeof adoptPet);
-  // console.log(typeof input);
+
+  function addSpaceEveryFourCharacters(str) {
+    return str.replace(/(.{4})(.{4})(.{0})/, "$1 $2 $3");
+  }
+
+  inputWithSpaces = addSpaceEveryFourCharacters(input);
+
+  let inputArray = inputWithSpaces.split(" ");
 
   // Logic for Syntax being "Valid" or "Invalid"
   if (
-    input == adoptPet &&
-    petBirthYear >= 1999 &&
-    petBirthYear <= 2024 &&
-    petName
+    inputArray[0] === "pet_" &&
+    inputArray[1] > 1999 &&
+    inputArray[1] <= 2024 &&
+    inputArray[2].length > 0
   ) {
     result = "Valid Syntax";
     console.log(result);
@@ -26,13 +25,21 @@ function validateSyntax() {
     console.log(result);
   }
 
-  // function yearRanges(x, y) {
-  //   if (x >= 0 && x <= 0) {
-  //   }
-  // }
-
   // TODO: Write your validation logic here
   // Check if input starts with 'pet_' and followed by alphanumeric characters
 
   document.getElementById("result").innerText = result;
 }
+
+// let petBirthYear = "2015";
+// let petName = "Forrest";
+// let petInfo = ["pet_", "2015", "Forrest"];
+// let adoptPet = petInfo.join("");
+
+// if (input == adoptPet) {
+//   result = "Valid Syntax";
+//   console.log(result);
+// } else {
+//   result = "Invalid Syntax";
+//   console.log(result);
+// }
