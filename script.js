@@ -30,16 +30,3 @@ function validateSyntax() {
 
   document.getElementById("result").innerText = result;
 }
-
-// let petBirthYear = "2015";
-// let petName = "Forrest";
-// let petInfo = ["pet_", "2015", "Forrest"];
-// let adoptPet = petInfo.join("");
-
-// if (input == adoptPet) {
-//   result = "Valid Syntax";
-//   console.log(result);
-// } else {
-//   result = "Invalid Syntax";
-//   console.log(result);
-// }
